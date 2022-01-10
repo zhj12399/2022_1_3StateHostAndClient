@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务器浏览</title>
+</head>
+<body>
+<h2>服务器</h2>
+<h3>编号 - 时间 - ip - 处理器个数 - 处理器使用率 - 总内存 - 剩余内存 - 内存使用率 - 硬盘总空间 - 硬盘剩余空间 - 网络发送量 - 网络接收量</h3>
+{% autoescape off %}
+<h3>{{ text }}</h3>
+{% endautoescape %}
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="刷新" name="save_button" style="width: 80px;height: 60px">
+</form>
+</body>
+</html>
